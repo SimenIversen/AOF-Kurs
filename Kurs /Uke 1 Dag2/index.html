@@ -27,12 +27,19 @@
             <li>There</li>
         </ol>
     </div>
-
+    <div id="testDiv">
+        start test her
+        <button onclick="oppdaterTest()">Trykk på denne knappen for å oppdatere teksten</button>
+    </div>
     <script>
         function buttonClick(){
             
 
             alert('Hello There!!');
+        }
+        function oppdaterTest(){
+            document.getElementById('testDiv');
+            document.getElementById('testDiv').innerHTML = "Ny tekst her nå som kanppen er trykket på!";
         }
     </script>
 </body>
