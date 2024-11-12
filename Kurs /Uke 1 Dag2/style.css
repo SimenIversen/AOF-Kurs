@@ -1,0 +1,26 @@
+body {
+    background-color: gray;
+    color: white;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+#container {
+    background-color: red;
+    width: 200px;
+}
+.paragraphStyle {
+    background-color: blue;
+    border: 3px dotted rgb(239, 12, 179);
+}
+.buttons {
+    color: #fdfbfb;
+    background-color: lightblue;
+    border: none;
+}
