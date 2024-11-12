@@ -9,18 +9,28 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background:url(https://storage.googleapis.com/pod_public/1300/152375.jpg);
+    background-size: cover;
+    background-position: center;
+
 
 }
 #container {
-    background-color: red;
+    background-color:rgba(255, 255, 255, 0);
     width: 200px;
 }
 .paragraphStyle {
-    background-color: blue;
-    border: 3px dotted rgb(239, 12, 179);
+    background-color: rgba(0, 0, 255, 0);
+    border: 3px dotted rgba(239, 12, 178, 0);
 }
 .buttons {
     color: #fdfbfb;
-    background-color: lightblue;
+    background-color: rgba(173, 216, 230, 0);
     border: none;
+    cursor: crosshair;
 }
+.list {
+    list-style: disc;
+}
+
+
