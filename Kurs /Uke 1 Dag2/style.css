@@ -1,6 +1,6 @@
 body {
     background-color: gray;
-    color: white;
+    color: rgb(255, 255, 255);
     gap: 20px;
     margin: 0;
     padding: 0;
@@ -24,10 +24,16 @@ body {
     border: 3px dotted rgba(239, 12, 178, 0);
 }
 .buttons {
-    color: #fdfbfb;
+    color: #ffffff;
     background-color: rgba(173, 216, 230, 0);
     border: none;
     cursor: crosshair;
+}
+.buttons2 {
+    color:white;
+    background-color: rgba(173, 216, 230, 0);
+    border: none;
+    cursor: auto;
 }
 .list {
     list-style: disc;
