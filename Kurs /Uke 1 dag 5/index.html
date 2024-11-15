@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainDiv"></div>
+    <button onclick="createAndShowHtml('green', 'There is only one', 30)">Test 1</button>
+    <button onclick="createAndShowHtml('blue','Rule in this jungle',50)">Test 2</button>
+    <button onclick="createAndShowHtml('purple','When the lion is hungry', 40)">Test 3</button>
+    <button onclick="createAndShowHtml('orange','He eats!', 40)">Test 4</button>
+
+    <script>
+        function createAndShowHtml(color, text, fontSize){
+            document.getElementById('mainDiv').innerHTML = /*html*/ `
+            <div ${createStyle(color, fontSize)}>${text} </div>`;
+        }
+        function createStyle(color, fontSize){
+            return `style="background-color:${color}; font-size:${fontSize}px;"`;
+        }
+    </script>
+</body>
+
+
+</html>
+
