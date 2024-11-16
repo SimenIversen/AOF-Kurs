@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Her kan du skrive tekst</h1>
+        <div id="inputDiv">
+            <input id="textInput" placeholder="Her kan du skrive">
+            <button onclick="printText()" class="submitButton">Vis tekst på nettleser</button>
+        </div>
+        <ol id="outputDiv"></ol>
+    </div>
+    <script>
+        const output = document.getElementById('outputDiv');
+
+        function printText(){
+            const input = document.getElementById('textInput').value;
+            output.innerHTML += /*HTML*/ `
+            <li><input type="checkbox">${input}</li>`;
+        }
+    </script>
+</body>
+</html>
