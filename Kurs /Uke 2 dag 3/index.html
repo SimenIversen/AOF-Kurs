@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formater stringen</title>
+</head>
+<body>
+    <input type="text" onchange="upperCase(this.value)">
+    <div id="display"></div>
+
+    <script>
+        function upperCase(text){
+            let firstText = text.slice(0,1);
+
+            firstText = firstText.toUpperCase();
+
+            text = firstText + text.slice(1,text.length);
+
+           document.getElementById("display").innerHTML = text;
+        }
+    </script>
+
+</body>
+</html>

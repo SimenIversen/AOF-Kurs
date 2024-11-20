@@ -12,7 +12,7 @@
             <input id="textInput" placeholder="Her kan du skrive">
             <button onclick="printText()" class="submitButton">Vis tekst på nettleser</button>
         </div>
-        <ol id="outputDiv"></ol>
+        <ul id="outputDiv"></ul>
     </div>
     <script>
         const output = document.getElementById('outputDiv');
@@ -20,7 +20,7 @@
         function printText(){
             const input = document.getElementById('textInput').value;
             output.innerHTML += /*HTML*/ `
-            <li><input type="checkbox">${input}</li>`;
+            <li>${input}</li>`;
         }
     </script>
 </body>

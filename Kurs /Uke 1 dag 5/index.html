@@ -13,15 +13,8 @@
     <button onclick="createAndShowHtml('purple','When the lion is hungry', 40)">Test 3</button>
     <button onclick="createAndShowHtml('orange','He eats!', 40)">Test 4</button>
 
-    <script>
-        function createAndShowHtml(color, text, fontSize){
-            document.getElementById('mainDiv').innerHTML = /*html*/ `
-            <div ${createStyle(color, fontSize)}>${text} </div>`;
-        }
-        function createStyle(color, fontSize){
-            return `style="background-color:${color}; font-size:${fontSize}px;"`;
-        }
-    </script>
+    <script src="./script.js"></script>
+    
 </body>
 
 
