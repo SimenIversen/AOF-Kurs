@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    font-family: "Plus Jakarta Sans", serif;
+}
+
+body {
+    background-image: url('https://cdn.discordapp.com/attachments/1308785709510819861/1308785748123713577/2024-11-20_14-22-52.png?ex=673f3536&is=673de3b6&hm=6449c61f6fcc28136c05741ea8f48cbbd7c5dd4acf43bedebe1699447403188f&');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    opacity: 90%;
+}
+
+button {
+    background-color: red;
+    background: url('https://github.com/pg8wood/OSRS-touch-bar/blob/master/OSRS-touch-bar/Supporting%20Files/Assets.xcassets/Button_Background.imageset/658_0.png?raw=true') no-repeat top left;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 4px 2px;
+    border: none;
+    position: absolute;
+    right: 6%;
+    bottom: 40%;
+}
+
+input {
+    color: rgb(39, 39, 39);
+    padding-right: 20%;
+    text-align: center;
+    border-style: solid;
+    margin-bottom: -0%;
+}
+#inventorySpace {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.item{
+    /*legge til boks i høyre hjørne*/
+}
