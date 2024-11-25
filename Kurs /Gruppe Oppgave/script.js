@@ -1,14 +1,14 @@
-const inventoryDiv = document.getElementById('inventory');
-let inventory = "";
 
-function addToInventory(clickedItem){
-    inventory += clickedItem.innerHTML;
+let inventory = "" ;
+
+function addToInventory(clickedItem) {
+    inventory += clickedItem.outerHTML + " ";
 }
 
-function showInventory(){
-    inventoryDiv.innerHTML = getInventoryContents();
-
+function showInventory() {
+    document.getElementById('Inventory').innerHTML = inventory;
 }
-function getInventoryContents(){
-    return inventory;
+
+function removeClass(clickedItem) {
+    clickedItem.classList.remove('item');
 }
