@@ -39,7 +39,8 @@
 
             if (operatorInput === correctOperator){
                 points += 1;
-            } else{
+            } 
+            else{
                 points -= 1;
             }
             document.getElementById("numberScore").textContent = `poeng: ${points}`
@@ -49,9 +50,11 @@
         function getCorrectOperator(){
             if (firstNum > secondNum) {
                 return ">";
-            } else if (firstNum < secondNum){
+            } 
+            else if (firstNum < secondNum){
                 return "<";
-            } else {
+            } 
+            else {
                 return "=";
             }
         }
