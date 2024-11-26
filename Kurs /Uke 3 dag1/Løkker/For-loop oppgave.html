@@ -7,10 +7,14 @@
 </head>
 <body>
     <div id="vokaler">
+
         
     </div>
     <script>
-        let text = "Hei, her skal vi telle vokaler"; 
+        
+        
+
+        let text = "aeiouyæøå"; 
         let aCounter = 0;
         let eCounter = 0;
         let iCounter = 0;
@@ -46,7 +50,18 @@
 
                 console.log(text[i])
             }
+
         }
+        function reverse(){
+            return text 
+            .split("")
+            .sort((a,b)=> b.localeCompare(a))
+            .join("")
+        }
+        text = reverse()
+        console.log(text);
+
+        
     </script>
 
 
