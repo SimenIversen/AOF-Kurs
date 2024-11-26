@@ -1,5 +1,6 @@
 function mainPageView(){
     let user = model.app.loggedInUser;
+    console.table(user);
     app.innerHTML = /*HTML*/ `
     <div>
         <h1> Main Page</h1>
