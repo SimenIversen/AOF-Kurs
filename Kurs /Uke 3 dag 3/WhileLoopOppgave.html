@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number</title>
+</head>
+<body>
+    <div> Random number
+        <div id="number"></div>
+        <button onclick="randomNumber()"></button>
+    </div>
+    <script>
+            let number1 = 0;
+            let number2 = 0;
+
+            updateNumbers();
+
+            function updateNumbers(){
+                number1 = getRandomNumbers();
+                number2 = getRandomNumbers();
+            //     document.getElementById('firstNumber')= number1;
+            //     document.getElementById('secundNumber')= number2;
+            }
+        function getRandomNumbers(){
+            return Math.round(Math.random() * 100);
+        }
+        function randomNumber(){
+         while(number1 !== number2){
+            updateNumbers()
+            console.log(number1 + ' ' + number2);
+
+         }
+
+         console.log('tallene er like!');
+         document.getElementById('number').innerText = `Tallene er ${number1} & ${number2} og dette er det vi ser etter!`
+         updateNumbers();
+        }
+    </script>
+</body>
+</html>
