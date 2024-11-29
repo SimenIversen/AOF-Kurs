@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop</title>
+</head>
+<body>
+    <div>Numbers
+    <div id="display"></div>
+    <button onclick="multiplayBy2()">Multiplay by 2</button>
+    <div id="text"></div>
+    <button onclick="getFirstWord()">Get first word</button>
+    </div>
+    <script>
+        function multiplayBy2(){
+            let number = 2;
+            while(number <= 100){
+                number *= 2;
+                document.getElementById('display').innerHTML += number + '  ';
+            }
+        }
+        function getFirstWord(){
+            let text = 'Arne går mot alfabetet ';
+            let seperator = '';
+            let firstWord = '';
+            let index = 0;
+
+            while(seperator !== ' '){
+                if(text.charAt(index) === ' '){
+                    seperator = ' ';
+
+                }
+                firstWord += text.charAt(index);
+                index++;
+
+                document.getElementById('text').innerHTML += firstWord + ' ';
+            }
+
+            
+        }
+    </script>
+</body>
+</html>

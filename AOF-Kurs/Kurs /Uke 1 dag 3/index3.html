@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1>Welcome</h1>
+    <p>Mitt navn er Simen Hauge Iversen, jeg er 28 år gammel.
+        Jeg har en datter på 11 månder, som betyr alt for meg.</p>
+        <p>Mine hobbyer er.</p>
+        <div id="container">
+        <button onclick="layout1()">change list</button>
+        <ul class="list">
+            <li>Trening</li>
+            <li>Gaming</li>
+            <li>TV serier</li>
+            <li>Filmer</li>
+            <li>Biler</li>
+        </ul>
+        </div>
+    <img src="IMG_1192.JPG" alt="bilde av meg" width="300" height="350">
+<script>
+    function layout1(){
+        document.getElementById('body').style.backgroundColor = 'orange';
+        document.getElementById('container').innerHTML = /*HTML*/`<button onclick="layout2()">change list</button>
+        <ul class="list">
+            <li>Trening</li>
+            <li>Gaming</li>
+            <li>TV serier</li>
+            <li>Filmer</li>
+            <li>Biler</li>
+        </ul>`
+    }
+   function layout2(){
+    document.getElementById('body').style.backgroundColor ='lightslategray';
+        document.getElementById('container').innerHTML = /*HTML*/`<button onclick="layout1()">change list</button>
+        <ul class="list">
+            <li>Trening</li>
+            <li>Gaming</li>
+            <li>TV serier</li>
+            <li>Filmer</li>
+            <li>Biler</li>
+        </ul>`
+   }
+    
+</script>
+
+    
+</body>
+</html>

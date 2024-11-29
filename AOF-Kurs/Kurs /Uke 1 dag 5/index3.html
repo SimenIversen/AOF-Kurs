@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pink box"  onclick="changeColor(this)"></div>
+    <div class="red box" onclick="changeColor(this)"></div>
+    <div class="blue box"  onclick="changeColor(this)"></div>
+    
+</body>
+<script>
+    function changeColor(Element){
+        Element.style.backgroundColor = "green"
+        Element.innerHTML = 'Hei'
+    }
+    
+</script>
+<style>
+    .box{
+        height: 100px;
+        width: 100px;
+    }
+    .pink{
+        background-color: pink;
+    }
+    .red{
+        background-color: red;
+    
+    }
+    .blue{
+        background-color: blue;
+    }
+</style>
+</html>

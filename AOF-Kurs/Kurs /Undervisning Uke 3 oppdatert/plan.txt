@@ -1,0 +1,8 @@
+Plan for dsagen:
+
+- Legge til currentPage i model| done
+- Lage en universal View funksjon|
+- Find funksjon - både med brukernavn og Id|
+- Skrive om loggin funksjon|
+- Lage signup page|
+- Begynne på MainPage og Kanskje Profile Page|

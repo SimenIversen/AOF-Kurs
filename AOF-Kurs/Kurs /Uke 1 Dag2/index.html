@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>En to, en to, en støvel og en sko</h1>
+        <p class="paragraphStyle">hællæ</p>
+        <span style="background-color: rgba(238, 130, 238, 0);">dette er en span</span>
+        <br>
+        <button onclick="buttonClick()" class="buttons">Try me</button>
+        <ul class="list">
+            <li>Hey</li>
+            <li>There</li>
+            <li>Hey</li>
+            <li>There</li>
+        </ul>
+        <ol>
+            <li>Hey</li>
+            <li>There</li>
+            <li>Hey</li>
+            <li>There</li>
+        </ol>
+    </div>
+    <div id="testDiv">
+        start test her
+        <button onclick="oppdaterTest()" class="buttons2">Trykk på denne knappen for å oppdatere teksten</button>
+    </div>
+    <script>
+        function buttonClick(){
+            
+
+            alert('Hello There!!');
+        }
+        function oppdaterTest(){
+            document.getElementById('testDiv');
+            document.getElementById('testDiv').innerHTML = "Ny tekst her nå som kanppen er trykket på!";
+        }
+    </script>
+</body>
+</html>

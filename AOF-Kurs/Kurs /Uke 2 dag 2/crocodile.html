@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="numberScore">Poeng: 0</div>
+    <div id="firstNum"></div>
+    <input id="crocodile" type="text"></input>
+    <div id="secondNum"></div>
+    <button onclick="submit()">Submit</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+        var points = 0;
+        var firstNum = 0;
+        var secondNum = 0;
+  
+        updateNumbers()
+
+        function reset(){
+            updateNumbers();
+        }
+
+        function updateNumbers(){
+            firstNum = getRandomNumber();
+            secondNum = getRandomNumber();
+            document.getElementById("firstNum").innerHTML = firstNum;
+            document.getElementById("secondNum").innerHTML = secondNum;
+        }
+
+        function getRandomNumber(){
+            return Math.round(Math.random() * 10);
+        }
+        function submit(){
+            let operatorInput = document.getElementById("crocodile").value;
+            let correctOperator = getCorrectOperator();
+
+            if (operatorInput === correctOperator){
+                points += 1;
+            } 
+            else{
+                points -= 1;
+            }
+            document.getElementById("numberScore").textContent = `poeng: ${points}`
+            updateNumbers();
+        }
+
+        function getCorrectOperator(){
+            if (firstNum > secondNum) {
+                return ">";
+            } 
+            else if (firstNum < secondNum){
+                return "<";
+            } 
+            else {
+                return "=";
+            }
+        }
+    </script>
+    
+</body>
+</html>

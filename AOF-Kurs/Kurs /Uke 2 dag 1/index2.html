@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+      const outputDiv = document.getElementById("output");
+
+      let onOrOff = false;
+      let iAmTernary = "avslått";
+      let lights = "gray";
+
+      drawHTML();
+      function drawHTML() {
+        console.log(lights);
+        let HTML = `
+        <div style="background-color:${lights}">
+            <button onclick="activeSwitch()">lysbryter</button>
+            </div>
+            ${iAmTernary}
+        `;
+        outputDiv.innerHTML = HTML;
+      }
+      function activeSwitch() {
+        onOrOff = !onOrOff;
+
+        iAmTernary = onOrOff == false ? "avslått" : "påslått";
+        lights = onOrOff == false ? "gray" : "yellow";
+        drawHTML();
+      }
+    </script>
+  </body>
+</html>
