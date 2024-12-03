@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gjenkjenn Epost</title>
+</head>
+<body>
+    <div id="app">
+        <input id="emailInput" type="text" placeholder="E-post">
+        <button onclick="validateEmail()">Sjekk e-post</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function validateEmail() {
+            const email = document.getElementById("emailInput").value;
+            const result = document.getElementById("result");
+
+            if (email.includes("@") && email.includes(".") && email.indexOf('.') > email.indexOf('@') && !email.includes(' ')) {
+                result.textContent = "Gyldig e-postadresse!";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Ugyldig e-postadresse.";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
