@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi Bilspill</title>
+</head>
+<body>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(45, 45, 45);
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin: 0;
+    }
+    h1 {
+        font-size: 4rem;
+        margin: 20px 0;
+    }
+    .road {
+            position: relative;
+            width: 90%;
+            height: 100px;
+            background-color: gray;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+    }
+    .car {
+        font-family: monospace;
+        margin: 20px auto;
+        font-size: 16px;
+        line-height: 1;
+        white-space: pre;
+        position: absolute;
+        left: 0;
+    }
+    .stats {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    .stat {
+        font-size: 1.2rem;
+    }
+    .actions {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 0.3rem;
+        background-color: #373737;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #404040;
+    }
+    .game-over {
+        font-size: 3rem;
+        font-weight: 200px;
+        color: red;
+        margin-top: 40px;
+    }</style>
+    </style>
+    <h1>Tamagotchi bilspill</h1>
+    <div class="road">
+    <div class="car" id="car">
+       ______
+    __/  |   \_
+    |  _     _``-.
+          '-(_)---(_)--'      
+    </div>
+</div>
+    <div class="stats">
+        <div class="stat" id="fuel"> Bensin: 100</div>
+        <div class="stat" id="cleanliness"> Renhet: 100</div>
+        <div class="stat" id="tiers"> Dekktilstand: 100</div>
+    </div>
+<div class="actions">
+    <button onclick="refuel()">Fyll bensin</button>
+    <button onclick="wash()">Vaske bilen</button>
+    <button onclick="checkTiers()">Sjekk dekk</button>
+</div>    
+<div class="game-over" id="gameOver" style="display: none;">Game over! Try again!</div>
+<script>
+    let fuel = 100;
+    let cleanliness = 100;
+    let tires = 100;
+    let isGameOver = false;
+    let carPosition = 0;
+
+    function updateStats(){
+        document.getElementById("fuel").textContent = `Bensin: ${fuel.toFixed(1)}`;
+        document.getElementById("cleanliness").textContent = `Renhet: ${cleanliness.toFixed(1)}`;
+        document.getElementById("tiers").textContent = `Dekktilstand: ${tires.toFixed(1)}`;
+    }
+    function updateCarPosition(){
+        const car = document.getElementById("car");
+        carPosition += 1; 
+        if (carPosition > 90) carPosition = 0;
+        car.style.left = `${carPosition}%`;
+    }
+
+    function gameLoop() {
+    if (isGameOver) return;
+
+    fuel -= Math.random() * 5;
+    cleanliness -= Math.random() * 3;
+    tires -= Math.random() * 4;
+
+    if (fuel <= 0 || cleanliness <= 0 || tires <= 0) {
+        endGame();
+        return;
+    }
+
+        updateStats();
+        updateCarPosition();
+        setTimeout(gameLoop, 1000);
+    }
+    function refuel(){
+        if(isGameOver) return;
+        fuel = Math.min(fuel + 20, 100);
+        updateStats();
+    }
+    function wash(){
+        if(isGameOver) return;
+        cleanliness = Math.min(cleanliness + 15, 100);
+        updateStats();
+
+    }
+    function checkTiers(){
+        if(isGameOver) return;
+        tires = Math.min(tires + 25, 100);
+        updateStats();
+    
+    }
+    function endGame() {
+        isGameOver = true;
+        updateStats();
+        document.getElementById("gameOver").style.display = "block";
+    }
+    gameLoop();
+
+</script>
+</body>
+</html>
