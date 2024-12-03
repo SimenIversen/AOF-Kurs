@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="textInput" type="text" >
+    <button onclick="printNumbers()">Print numbers</button>
+    <div id="numbers"></div>
+    <script>
+        function printNumbers(){
+            let stopValue = 10;
+            for (let counter = 1; counter<= stopValue; counter++){
+                document.getElementById('numbers').innerHTML += '<li>' + counter +'</li>';
+            }
+            
+           
+        }
+    </script>
+</body>
+</html>

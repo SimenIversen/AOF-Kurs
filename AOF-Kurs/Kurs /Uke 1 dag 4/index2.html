@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainDiv">innerHTML</div>
+    <button onclick="valgfrittNavn('red',50,100)">test 1</button>
+    <button onclick="valgfrittNavn('blue',25,50)">test 2</button>
+    
+    <script>
+        function valgfrittNavn(color,width, height){
+            document.getElementById('mainDiv').innerHTML = /*HTML*/`
+            <div style="background-color:${color}; width: ${width}%; height: ${height}px;"></div>`}
+    </script>
+    
+    <!--<script>
+        function valgfrittNavn(){
+            document.getElementById('mainDiv').innerHTML = /*HTML*/`
+            <div style="background-color:red; width: 100%; height: 100px;"></div>`
+        }
+        function valgfrittnavn2(){
+            document.getElementById('mainDiv').innerHTML = /*HTML*/`
+            <div style="background-color:blue; width: 100%; height: 100px;"></div>`
+        }
+    </script>-->
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="app"></div>
+ 
+<script>
+    let name = ".. her kommer navnet ditt";
+    let place = ".. her kommer et sted";
+    let food = ".. her kommer en matrett  ";
+    updateView() 
+    function updateView(){
+        let html = `    <div class="group">
+    <div>Hei jeg heter</div>
+    <div id="nameDiv">${name}</div>
+</div>
+<div class="group">
+    <div>jeg bor i </div>
+    <div id="placeDiv">${place}</div>
+</div>
+<div class="group"> 
+    <div>Min favorittmat er</div>
+    <div id="foodDiv">${food}</div>
+</div>
+<button onclick="setFields()">Klikk er for og sette verdier</button>
+<input type="text" onchange="setName(this.value)">
+<input type="text" onchange="setPlace(this.value)">
+<input type="text" onchange="setFood(this.value)"> `
+document.getElementById('app').innerHTML = html;
+
+        /*document.getElementById("nameDiv").innerHTML = name;
+        document.getElementById('placeDiv').innerHTML = place;
+        document.getElementById('foodDiv').innerHTML = food;*/
+    }
+
+    function setName(nameInput){
+        name = nameInput;
+        updateView(); 
+    }
+    function setPlace(placeInput){
+        place = placeInput;
+        updateView();
+    }
+    function setFood(foodInput){
+        food = foodInput;
+        updateView();
+    }
+</script>
+<style>
+    .group{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+</style>
+</body>
+</html>

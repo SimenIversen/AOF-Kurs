@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <button onclick="setNumUp()">klikk her</button>
+    <button onclick="setNumDown()">klikk her</button>
+    
+    <script>
+        var uotputDiv = document.getElementById("output")
+        var numToShow = 0;
+
+        function setNumUp(){
+            numToShow++;
+            uotputDiv.innerHTML = numToShow;
+         }
+         function setNumDown(){
+            numToShow--;
+            uotputDiv.innerHTML = numToShow;
+         }
+         
+        
+    </script>
+
+</body>
+</html>

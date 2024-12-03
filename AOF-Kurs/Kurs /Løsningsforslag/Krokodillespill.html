@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krokodillespill</title>
+    <style>
+        #container {
+            display: flex;;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .numberDivs {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-size: 50px;
+            padding-top: 25px;
+        }
+        img {
+            width: 200px;
+        }
+
+        #crocodile {
+            width: 100px;
+            height: 94px;
+            text-align: center;
+            font-size: 50px;
+
+        }
+        #theGame {
+            display: flex;
+        }
+        #numberScore {
+            font-size: 50px;
+        }
+        .Btn {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="numberScore">Poeng: 0</div>
+
+        <img src="img/krokodillespill.png">
+        <div id="theGame">
+            <div class="numberDivs" id="number1"></div>
+            <input id="crocodile" type="text">
+            <div class="numberDivs" id="number2"></div>
+        </div>
+        <button class="Btn" onclick="submit()">Submit</button>
+        <button class="Btn"  onclick="reset()">Reset</button>
+
+        <script>
+
+            var points = 0;
+            var firstNumber = 0;
+            var secondNumber = 0;
+            
+            updateNumbers();
+
+            function reset() {
+                updateNumbers();
+            }
+            function updateNumbers() {
+                firstNumber = getRandomNumbers();
+                secondNumber = getRandomNumbers();
+                document.getElementById('number1').innerHTML = firstNumber;
+                document.getElementById('number2').innerHTML = secondNumber;
+            }
+
+            function getRandomNumbers() {
+                return Math.round(Math.random() * 10);
+            }
+            function submit() {
+                let operatorInput = document.getElementById('crocodile').value;
+                let correctOperator = getCorrectOperator();
+
+                if (operatorInput === correctOperator) {
+                    points += 1;
+                } else {
+                    points -= 1;
+                }
+                document.getElementById('numberScore').textContent = `Poeng: ${points}`
+                updateNumbers();
+
+            }
+
+            function getCorrectOperator() {
+                if (firstNumber > secondNumber) {
+                    return ">";
+                } else if (firstNumber < secondNumber) {
+                    return "<";
+                } else {
+                    return "=";
+                }
+            }
+
+
+        </script>
+
+    </div>
+
+</body>
+
+</html>
